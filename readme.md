@@ -5,6 +5,8 @@ Steps
 
 	sudo apt-add-repository -y ppa:mapnik/nightly-2.0
 
+*Mandatory:*
+
 	sudo apt-get update
 	sudo apt-get install -y build-essential python-dev python-pip python-imaging zlib1g-dev postgresql-9.1-postgis \
 	postgresql-server-dev-9.1 mapnik-utils git htop libjson0 libjson0-dev python-mapnik2 \
