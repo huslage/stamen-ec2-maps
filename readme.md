@@ -2,6 +2,7 @@ Steps
 =====
 
 *Optional:*
+
 	sudo apt-add-repository -y ppa:mapnik/nightly-2.0
 
 	sudo apt-get update
@@ -28,4 +29,4 @@ Imposm
 
 Boot an Instance
 ----------------
-ec2-run-instances ami-13373367 -n 2 --instance-type m1.xlarge --region eu-west-1 --user-data-file maps-init.txt -k map-test-large-2 -g quicklaunch-1
+	ec2-run-instances ami-13373367 -n 2 --instance-type m1.xlarge --region eu-west-1 --user-data-file maps-init.txt -k map-test-large-2 -g quicklaunch-1
