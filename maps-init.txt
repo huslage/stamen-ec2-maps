@@ -1,0 +1,38 @@
+#cloud-config
+apt_upgrade: true
+ssh_import_id: [huslage]
+
+mounts:
+- [ ephemeral0, /mnt, auto, "defaults,noexec" ]
+- [ ephemeral1, /mnt/data, auto, "defaults,noexec,nobootwait" ]
+
+packages:
+- build-essential
+- python-dev
+- python-pip
+- python-imaging
+- zlib1g-dev
+- postgresql-9.1-postgis
+- postgresql-server-dev-9.1
+- mapnik-utils
+- git
+- htop
+- libjson0
+- libjson0-dev
+- python-mapnik2
+- protobuf-c-compiler
+- protobuf-compiler
+- libprotobuf-dev
+- libtokyocabinet-dev
+- python-psycopg2
+- libgeos-c1
+- libgeos-dev
+- python-pip
+- sysstat
+
+runcmd:
+- pip install tilestache
+- pip install modestmaps
+- pip install cssutils
+- pip install cascadenik
+- pip install imposm
