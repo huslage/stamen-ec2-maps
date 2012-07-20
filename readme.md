@@ -32,3 +32,7 @@
 *Imposm*
 	imposm -m imposm-mapping.py --write -U osm -d planet --read ../canv.pbf --concurrency 3 --overwrite-cache --deploy-production-tables
 
+==Notes==
+	1. xlarge instances are very hit-or-miss regarding I/O throughput. They are not high priority instances, but have lots of ephemeral storage. This causes
+	   some difficulty when trying to compare various instance types.
+	2. 4xlarge instances have great I/O priority and RAM availability. It might be advisable to have predictable performance in some cases.
