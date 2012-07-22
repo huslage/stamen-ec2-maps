@@ -1,6 +1,11 @@
 *Boot an Instance*
 	ec2-run-instances ami-13373367 -n 2 --instance-type m1.xlarge --region eu-west-1 --user-data-file maps-init.txt -k map-test-large-2 -g quicklaunch-1
 
+*Setup*
+
+Each instance is configured with 2 ephemeral disks. One is mounted on <pre>/mnt</pre> and contains the scripts, raw data and tile cache. The other 
+is mounted on <pre>/mnt/data</pre> and holds the postgres database.
+
 *Optional*
 	sudo apt-add-repository -y ppa:mapnik/nightly-2.0
 
