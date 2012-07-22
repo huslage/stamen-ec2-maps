@@ -6,6 +6,7 @@
 Each instance is configured with 2 ephemeral disks. One is mounted on <pre>/mnt</pre> and contains the scripts, raw data and tile cache. The other 
 is mounted on <pre>/mnt/data</pre> and holds the postgres database.
 
+==Setup Steps==
 *Optional*
 	sudo apt-add-repository -y ppa:mapnik/nightly-2.0
 
