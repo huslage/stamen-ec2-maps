@@ -9,11 +9,8 @@ is mounted on <pre>/mnt/data</pre> and holds the postgres database.
 
 ##Setup Steps
 
-###Optional
-
-	sudo apt-add-repository -y ppa:mapnik/nightly-2.0
-
-###Mandatory
+###Packages
+_These are all included in the map-init.txt user-script._
 
 	sudo apt-get update
 	sudo apt-get install -y build-essential python-dev python-pip python-imaging zlib1g-dev postgresql-9.1-postgis \
@@ -53,15 +50,14 @@ is mounted on <pre>/mnt/data</pre> and holds the postgres database.
    some difficulty when trying to compare various instance types.
 2. 4xlarge instances have great I/O priority and RAM availability. It might be advisable to have predictable performance in some cases.
 3. Memory Tweaks on 4xl:
+  * Kernel
+ 
+			sudo sysctl -w kernel.shmmax=71881932800
+			sudo sysctl -w kernel.shmall=17549300
+  * Postgres
 
- * Kernel
-   ```sudo sysctl -w kernel.shmmax=71881932800```
-   ```sudo sysctl -w kernel.shmall=17549300```
-
- * Postgres
-
-   ```max_connections = 5```
-   ```shared_buffers = 5GB```
-   ```work_mem = 16MB ```
-   ```max_stack_depth = 7680kB```
-   ```autovacuum = off```
+			max_connections = 5
+ 			shared_buffers = 5GB
+			work_mem = 16MB
+			max_stack_depth = 7680kB
+			autovacuum = off
