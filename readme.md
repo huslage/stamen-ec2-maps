@@ -56,13 +56,13 @@ is mounted on <pre>/mnt/data</pre> and holds the postgres database.
 
  * Kernel
 
-	```sudo sysctl -w kernel.shmmax=71881932800
-	sudo sysctl -w kernel.shmall=17549300```
+	sudo sysctl -w kernel.shmmax=71881932800
+	sudo sysctl -w kernel.shmall=17549300
 
 * Postgres
 
-	```max_connections = 5
+	max_connections = 5
 	shared_buffers = 5GB
 	work_mem = 16MB 
 	max_stack_depth = 7680kB
-	autovacuum = off```
+	autovacuum = off
