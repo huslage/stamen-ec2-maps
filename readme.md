@@ -54,12 +54,12 @@ is mounted on <pre>/mnt/data</pre> and holds the postgres database.
 2. 4xlarge instances have great I/O priority and RAM availability. It might be advisable to have predictable performance in some cases.
 3. Memory Tweaks on 4xl:
 
- 	* Kernel
+ * Kernel
 
 	```sudo sysctl -w kernel.shmmax=71881932800
 	sudo sysctl -w kernel.shmall=17549300```
 
-	* Postgres
+* Postgres
 
 	```max_connections = 5
 	shared_buffers = 5GB
