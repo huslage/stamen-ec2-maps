@@ -61,3 +61,15 @@ _These are all included in the map-init.txt user-script._
 			work_mem = 16MB
 			max_stack_depth = 7680kB
 			autovacuum = off
+4. Memory Tweaks on xl:
+  * Kernel
+			sudo sysctl -w kernel.shmmax=15707828224
+			sudo sysctl -w kernel.shmall=3834919
+  * Postgres
+
+			max_connections = 5
+ 			shared_buffers = 1GB
+			work_mem = 16MB
+			max_stack_depth = 7680kB
+			autovacuum = off
+
